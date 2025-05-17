@@ -110,12 +110,5 @@ Output JSON:
 - Add progress bars and better console output
 - Support for batch processing multiple PDFs
 
-## 🙋‍♂️ Author
-Faik Bairamov
-
-📍 Georgia
-
-GitHub: @faikbairamov
-
 ## 📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
