@@ -1,19 +1,19 @@
-# 🧠 PDF Summarizer
+#  PDF Summarizer
 
 A Python-based Natural Language Processing (NLP) tool that extracts and summarizes text from PDF documents using powerful NLP models like BART and KeyBERT. Ideal for students, researchers, and professionals who want quick insights and keywords from PDF documents.
 
 ---
 
-## 🚀 Features
-- 📥 Extracts clean text from PDFs using PyMuPDF (fitz)
-- 🧠 Generates concise summaries using BART-large-CNN model
-- 🔑 Extracts relevant keywords using KeyBERT
-- 🧹 Cleans and processes text from PDFs
-- 📊 Exports results in structured JSON format
+##  Features
+-  Extracts clean text from PDFs using PyMuPDF (fitz)
+-  Generates concise summaries using BART-large-CNN model
+-  Extracts relevant keywords using KeyBERT
+-  Cleans and processes text from PDFs
+-  Exports results in structured JSON format
 
 ---
 
-## 📦 Built With
+##  Built With
 - Python 3.x
 - [`PyMuPDF (fitz)`](https://pymupdf.readthedocs.io/en/latest/) – PDF text extraction
 - [`transformers`](https://huggingface.co/docs/transformers/index) – Summarization via BART-large-CNN model
@@ -22,7 +22,7 @@ A Python-based Natural Language Processing (NLP) tool that extracts and summariz
 
 ---
 
-## 🛠 Setup
+##  Setup
 
 ### 1. Clone the repository
 ```bash
@@ -43,9 +43,9 @@ venv\Scripts\activate # For Windows
 pip install pymupdf transformers keybert torch
 ```
 
-💡 You may also need to install additional dependencies based on your environment.
+ You may also need to install additional dependencies based on your environment.
 
-## 🧪 Usage
+##  Usage
 
 ### Running the Script
 ```bash
@@ -74,7 +74,7 @@ print(summary)
 print(keywords)
 ```
 
-## 📁 Project Structure
+##  Project Structure
 ```
 pdf-summarizer/
 ├── summarizer.py  # Main script with PDF processing and NLP functions
@@ -84,7 +84,7 @@ pdf-summarizer/
 └── requirements.txt  # Optional
 ```
 
-## 🧠 Example Output
+##  Example Output
 
 Input PDF: A research paper (sample2.pdf)
 
