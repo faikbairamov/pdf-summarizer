@@ -102,13 +102,3 @@ Output JSON:
   ]
 }
 ```
-
-## ✅ TODO
-- Improve text extraction and cleaning
-- Add command line arguments for file input/output
-- Support for processing entire documents (currently limited to first few pages)
-- Add progress bars and better console output
-- Support for batch processing multiple PDFs
-
-## 📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
