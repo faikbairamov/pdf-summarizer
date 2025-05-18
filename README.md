@@ -15,6 +15,8 @@ A tool for automatically extracting and summarizing information from scientific 
 The project is deployed using Streamlit Cloud and available at:
 [https://faikbairamov-pdf-summarizer-app-hqdh2v.streamlit.app/](https://faikbairamov-pdf-summarizer-app-hqdh2v.streamlit.app/)
 
+You can test the app with the `sample_file.pdf` from the repository.
+
 > **Note**: The application is currently in beta. Some bugs and issues have been identified and will be fixed in upcoming updates.
 
 ## requirements
