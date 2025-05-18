@@ -1,3 +1,18 @@
+import sys
+import streamlit.watcher.local_sources_watcher as watcher
+import asyncio
+
+# Prevent Streamlit from scanning torch internals
+watcher.get_module_paths = lambda *args, **kwargs: []
+
+# Ensure an event loop exists (avoids asyncio RuntimeError)
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
+# 🌟 Your actual app starts here
 import streamlit as st
 from summarizer import extract_text_from_pdf, clean_text, extract_keywords_with_bert, summarize
 import json
