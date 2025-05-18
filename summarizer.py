@@ -54,7 +54,7 @@ def main():
     with open("output.json", "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
-    print("✅ Done! Check output.json")
+    print("Done! Check output.json")
 
 if __name__ == "__main__":
     main()
