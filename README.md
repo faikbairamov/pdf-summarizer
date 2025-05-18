@@ -1,104 +1,80 @@
-#  PDF Summarizer
+# PDF summarizer for scientific papers
 
-A Python-based Natural Language Processing (NLP) tool that extracts and summarizes text from PDF documents using powerful NLP models like BART and KeyBERT. Ideal for students, researchers, and professionals who want quick insights and keywords from PDF documents.
+A tool for automatically extracting and summarizing information from scientific papers in PDF format.
 
----
+## features
 
-##  Features
--  Extracts clean text from PDFs using PyMuPDF (fitz)
--  Generates concise summaries using BART-large-CNN model
--  Extracts relevant keywords using KeyBERT
--  Cleans and processes text from PDFs
--  Exports results in structured JSON format
+- **Title Extraction**: Automatically identifies the title of the paper using font information and positional analysis
+- **Author Detection**: Extracts author names from the document
+- **Keyword Extraction**: Uses KeyBERT to identify the most important keywords and phrases
+- **Automatic Summarization**: Generates concise summaries using BART large CNN model
+- **JSON Export**: Download results in structured JSON format
 
----
+## live demo
 
-##  Built With
-- Python 3.x
-- [`PyMuPDF (fitz)`](https://pymupdf.readthedocs.io/en/latest/) – PDF text extraction
-- [`transformers`](https://huggingface.co/docs/transformers/index) – Summarization via BART-large-CNN model
-- [`KeyBERT`](https://maartengr.github.io/KeyBERT/) – Keyword extraction using BERT embeddings
-- [`all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) – Sentence transformer model for KeyBERT
+The project is deployed using Streamlit Cloud and available at:
+[https://faikbairamov-pdf-summarizer-app-hqdh2v.streamlit.app/](https://faikbairamov-pdf-summarizer-app-hqdh2v.streamlit.app/)
 
----
+> **Note**: The application is currently in beta. Some bugs and issues have been identified and will be fixed in upcoming updates.
 
-##  Setup
+## requirements
 
-### 1. Clone the repository
+- Python 3.8+
+- PyMuPDF (fitz)
+- KeyBERT
+- Transformers
+- Streamlit
+- BART model for summarization
+
+## installation
+
+1. Clone this repository
 ```bash
-git clone https://github.com/faikbairamov/pdf-summarizer.git
-cd pdf-summarizer
+  git clone https://github.com/yourusername/pdf-summarizer.git
+  cd pdf-summarizer
 ```
 
-### 2. Create a virtual environment
+2. Install the required packages
 ```bash
-python3 -m venv venv
-source venv/bin/activate # For macOS/Linux
-# or
-venv\Scripts\activate # For Windows
+  pip install -r requirements.txt
 ```
 
-### 3. Install dependencies
+3. Run the application locally
 ```bash
-pip install pymupdf transformers keybert torch
+  streamlit run app.py
 ```
 
- You may also need to install additional dependencies based on your environment.
+## project structure
 
-##  Usage
+- `app.py`: Main Streamlit application
+- `summarizer.py`: Core functions for text extraction and summarization
+- `requirements.txt`: Project dependencies
 
-### Running the Script
-```bash
-python summarizer.py
-```
+## how it works
 
-By default, the script processes "sample2.pdf" in the same directory and outputs results to "output.json".
+1. **PDF Text Extraction**: Uses PyMuPDF to extract raw text with font information
+2. **Title Identification**: Analyzes font sizes and positions to identify the title
+3. **Author Detection**: Uses patterns and positioning to identify author information
+4. **Text Cleaning**: Removes unnecessary line breaks and normalizes text
+5. **Summarization**: Leverages BART model to generate concise summaries
+6. **Keyword Extraction**: Uses KeyBERT to identify key topics in the document
 
-### As a Module
-```python
-from summarizer import extract_text_from_pdf, clean_text, extract_keywords_with_bert, summarize
+## known issues
 
-# Extract text from PDF
-text = extract_text_from_pdf("my_document.pdf")
+- Title extraction may not work correctly on PDFs with unusual formatting
+- Author extraction has limited accuracy on complex author lists
+- Longer documents may be truncated due to model token limitations
+- Some PDFs with complex layouts may not extract text properly
 
-# Clean the extracted text
-cleaned_text = clean_text(text)
+These issues are being actively addressed and will be fixed in upcoming releases.
 
-# Generate summary
-summary = summarize(cleaned_text[:1000])  # Summarize first 1000 chars
+## contributing
 
-# Extract keywords
-keywords = extract_keywords_with_bert(summary)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-print(summary)
-print(keywords)
-```
+## acknowledgements
 
-##  Project Structure
-```
-pdf-summarizer/
-├── summarizer.py  # Main script with PDF processing and NLP functions
-├── sample2.pdf    # Example PDF file to process
-├── output.json    # Generated output with summary and keywords
-├── README.md
-└── requirements.txt  # Optional
-```
-
-##  Example Output
-
-Input PDF: A research paper (sample2.pdf)
-
-Output JSON:
-```json
-{
-  "title": "Towards a Deeper Understanding of Reasoning Capabilities in Large Language Models",
-  "abstract": "Generated summary of the paper's abstract...",
-  "keywords": [
-    "reasoning capabilities",
-    "language models",
-    "understanding",
-    "deeper understanding",
-    "...more keywords..."
-  ]
-}
-```
+- [KeyBERT](https://github.com/MaartenGr/KeyBERT) for keyword extraction
+- [Hugging Face Transformers](https://huggingface.co/facebook/bart-large-cnn) for the BART summarization model
+- [PyMuPDF](https://github.com/pymupdf/PyMuPDF) for PDF processing
+- [Streamlit](https://streamlit.io/) for the web application framework
