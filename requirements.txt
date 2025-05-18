@@ -1,8 +1,8 @@
-PyMuPDF
-spaCy
-transformers
+streamlit==1.45.1
+transformers==4.51.3
 torch
-keybert
+PyMuPDF
+spacy
+keybert==0.9.0
 sentence-transformers
-transformers
 numpy
