@@ -2,3 +2,7 @@ PyMuPDF
 spaCy
 transformers
 torch
+keybert
+sentence-transformers
+transformers
+numpy
