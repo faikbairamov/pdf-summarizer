@@ -14,6 +14,7 @@ A comprehensive PDF processing and analysis platform that extracts, analyzes, an
 
 ### Advanced Features
 
+<<<<<<< HEAD
 - **Batch Processing**: Process multiple PDFs simultaneously with parallel processing
 - **Analytics Dashboard**: Comprehensive analytics and statistics with interactive visualizations
 - **Document Comparison**: Find similar documents and analyze content relationships
@@ -22,6 +23,11 @@ A comprehensive PDF processing and analysis platform that extracts, analyzes, an
 - **REST API**: Full REST API for programmatic access
 - **Interactive Visualizations**: Charts, graphs, and keyword clouds
 - **Performance Optimization**: Model caching and efficient processing
+=======
+You can test the app with the `sample_file.pdf` from the repository.
+
+> **Note**: The application is currently in beta. Some bugs and issues have been identified and will be fixed in upcoming updates.
+>>>>>>> 462a2d281dee665c6e4768f46a938d9631f8ad21
 
 ## Recent Improvements
 
@@ -104,6 +110,7 @@ The applications will open in your browser at:
 - Streamlit: `http://localhost:8501`
 - API: `http://localhost:5000`
 
+<<<<<<< HEAD
 ### Using the Enhanced Features
 
 **Batch Processing:**
@@ -227,3 +234,9 @@ The application includes comprehensive error handling:
 ## License
 
 This project is open source and available under the MIT License.
+=======
+- [KeyBERT](https://github.com/MaartenGr/KeyBERT) for keyword extraction
+- [Hugging Face Transformers](https://huggingface.co/facebook/bart-large-cnn) for the BART summarization model
+- [PyMuPDF](https://github.com/pymupdf/PyMuPDF) for PDF processing
+- [Streamlit](https://streamlit.io/) for the web application framework
+>>>>>>> 462a2d281dee665c6e4768f46a938d9631f8ad21
