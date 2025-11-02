@@ -354,3 +354,4 @@ class ExportManager:
                 logger.warning(f"PDF export failed: {e}")
         
         return exported_files
+

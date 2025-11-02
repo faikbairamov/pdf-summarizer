@@ -246,3 +246,4 @@ class DocumentComparator:
             clusters_dict[cluster_key].append(self.results[i]['file_name'])
         
         return clusters_dict
+

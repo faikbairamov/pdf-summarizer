@@ -193,3 +193,4 @@ def find_pdf_files(directory: str) -> List[str]:
             if file.lower().endswith('.pdf'):
                 pdf_files.append(os.path.join(root, file))
     return pdf_files
+

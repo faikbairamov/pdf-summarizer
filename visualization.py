@@ -277,3 +277,4 @@ def display_analytics_dashboard(results: List[Dict[str, Any]]):
     st.subheader("⏱️ Processing Timeline")
     timeline_fig = visualizer.create_timeline_chart()
     st.plotly_chart(timeline_fig, use_container_width=True)
+
